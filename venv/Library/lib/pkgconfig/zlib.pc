@@ -1,0 +1,13 @@
+prefix=C:/Users/jainh/OneDrive/Pictures/Desktop/2_minorProject/venv/Library
+exec_prefix=C:/Users/jainh/OneDrive/Pictures/Desktop/2_minorProject/venv/Library
+libdir=C:/Users/jainh/OneDrive/Pictures/Desktop/2_minorProject/venv/Library/lib
+sharedlibdir=C:/Users/jainh/OneDrive/Pictures/Desktop/2_minorProject/venv/Library/lib
+includedir=C:/Users/jainh/OneDrive/Pictures/Desktop/2_minorProject/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

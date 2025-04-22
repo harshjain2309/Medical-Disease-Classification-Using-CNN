@@ -1,0 +1,26 @@
+Dataset : https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+
+colab_file_link : https://colab.research.google.com/drive/1L0pByDWDeKEdRAD3eaivQJfFrYTCGqHg?authuser=3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

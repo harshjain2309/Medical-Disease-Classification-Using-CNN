@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a3093, #a044ff);
+            text-align: center;
+            padding: 50px;
+            color: white;
+            background-size: cover;
+        }
+
+        h1 {
+            background-color: rgba(160, 68, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            display: block;
+            color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            border-radius: 5px;
+            background: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            font-size: 18px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            transform: scale(1.05);
+        }
+
+        .result-container {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 500px;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            padding: 12px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        a:hover {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Skin Cancer Detection</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Skin Image:</label>
+        <input type="file" name="file" accept="image/*" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+    <div class="result-container">
+        <h2>Prediction: <strong>{{ prediction }}</strong></h2>
+        <img src="{{ image_url }}" alt="Uploaded Image"
+            style="max-width: 100%; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="result-container error-message">
+        <h2>Error: {{ error }}</h2>
+    </div>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+
+</html>

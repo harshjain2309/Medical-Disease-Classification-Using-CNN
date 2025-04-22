@@ -1,0 +1,24 @@
+Dataset link : https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset
+
+colab_file_link : https://colab.research.google.com/drive/1Zm4JEM8M8W0Opw74NtQl4FvkXv9v1oQE
+
+
+
+
+
+
+
+
+
+Breast cancer is one of the most common causes of death among women worldwide.
+ Early detection helps in reducing the number of early deaths.
+
+ The data reviews the medical images of breast cancer using ultrasound scan. 
+ Breast Ultrasound Dataset is categorized into three classes: normal, benign, and malignant images.
+normal -> 266 files, benign -> 891 files, malignant -> 421 files
+
+The data collected at baseline include breast ultrasound images among women in ages between 25 and 75 years old. 
+
+dataset consists of 780 images with an average image size of 500*500 pixels.
+
+GT==Ground Truth, present at the bottom of each image.
